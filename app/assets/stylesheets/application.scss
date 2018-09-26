@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+ #titulo{
+     width: 100%;
+     background: lightblue;
+     color: white;
+     padding: 10px;
+     box-sizing: border-box;
+     text-align: center;
+ }
+
+ #menuprincipal{
+     background: lightgray;
+     width: 29%;
+     display: inline-table;
+     box-sizing: border-box;
+     padding: 5px;
+     min-height: 10px;
+ }
+
+#contenido{
+    width: 70%;
+    display: inline-table;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#menuprincipal ul li {
+    font-size: 10pt;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    list-style: none;
+}
+
+#login{
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 3px;
+    /*
+    Otra forma de hacerlo es de la siguiente manera
+    #login{    
+    position: absolute;
+    top: 12px;
+    rigth: 33px;
+    }
+    */
+}
