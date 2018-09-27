@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180913223925) do
+ActiveRecord::Schema.define(version: 20180914145756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", id: :bigserial, force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "nombre"
     t.text     "descripcion"
     t.integer  "estado"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20180913223925) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "products", id: :bigserial, force: :cascade do |t|
-    t.bigint   "category_id"
+  create_table "products", force: :cascade do |t|
+    t.integer  "category_id"
     t.string   "nombre"
     t.text     "descripcion"
     t.float    "precio"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20180913223925) do
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
   end
 
-  create_table "users", id: :bigserial, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

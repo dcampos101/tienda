@@ -10,53 +10,90 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
-@import 'bootstrap';
+ @import 'bootstrap';
+ 
  #titulo{
-     width: 100%;
-     background: lightblue;
-     color: white;
-     padding: 10px;
-     box-sizing: border-box;
-     text-align: center;
+ background: rgb(7, 7, 112);
+color: white;
+margin: 0;
+border: 0;
+height: 100%;
+width: 100%;
+align-content: center;
+text-align: center;
+ }
+
+ #principal{
+background: white;
+margin: 2px;
+border: 2px;
+padding: 0;
+
  }
 
  #menuprincipal{
-     background: lightgray;
-     width: 29%;
-     display: inline-table;
-     box-sizing: border-box;
-     padding: 5px;
-     min-height: 10px;
+background: lightgray;
+color: white;
+margin: 0px;
+padding: 0px;
+width: 29%;
+height: 100%;
+display: inline-table;
+box-sizing: border-box;
+//min-height: 10px;
+
  }
 
-#contenido{
-    width: 70%;
-    display: inline-table;
-    box-sizing: border-box;
-    padding: 5px;
+ #contenido{
+background: whitesmoke;
+margin: 0px;
+padding: 0px;
+width: 70%;
+top: 0;
+height: 100%;
+display:inline-table;
+box-sizing: border-box; 
+//min-height: 10px;
+//position: relative;
+//top: 8.5%;
+ }
+ 
+ #menuprincipal ul li{
+font-size: 15pt;
+margin-bottom: 10px;
+margin-left: 10px;
+list-style: none;
+min-height: 10px;   
+box-sizing: border-box;
+height: 50px;
+
+ }
+ 
+ #menuprincipal a{
+  color: white;
+
 }
 
-#menuprincipal ul li {
-    font-size: 10pt;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    list-style: none;
-}
+#menuprincipal a:hover{
+   
+  text-decoration: none;
+  font-size: 16pt;
+  touch-action: pinch-zoom;
+  }
 
-#login{
-    width: 100%;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 3px;
-    /*
-    Otra forma de hacerlo es de la siguiente manera
-    #login{    
-    position: absolute;
-    top: 12px;
-    rigth: 33px;
-    }
-    */
-}
+
+ #login{
+  background: rgb(7, 7, 112);
+  font-size: 10pt;
+  height: 25PX;
+  width: 100%;
+text-align: right;
+color: white;
+ }
+/*
+Otra opcion para dejar el div en una parte especifica de la pantalla
+position:absolute;
+top: 12px;
+right: 33px;
+*/

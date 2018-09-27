@@ -56,8 +56,8 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     respond_to do |format|
-      format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
-      format.json { head :no_content }
+          format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
+          format.json { head :no_content }
     end
   end
 
@@ -69,6 +69,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:nombre, :description, :estado)
+      params.require(:category).permit(:nombre, :descripcion, :estado)
     end
 end

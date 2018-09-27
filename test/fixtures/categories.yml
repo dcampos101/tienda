@@ -2,10 +2,10 @@
 
 one:
   nombre: MyString
-  description: MyText
+  descripcion: MyText
   estado: 1
 
 two:
   nombre: MyString
-  description: MyText
+  descripcion: MyText
   estado: 1

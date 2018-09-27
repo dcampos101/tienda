@@ -9,42 +9,38 @@
   </head>
 
   <body>
-  
-    <div id = "login">
-    <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <header>
+  <div id="login">
+      <% if user_signed_in? %>
+        Logeado como <strong><%= current_user.email %></strong>.
+        <%= link_to 'Modificar Perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Salir", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-    </div>
+      <% end %>
+      </div>
 
-    <header> <h1 id = "titulo" >Tienda</h1> </header>
-    <main>
-
+      <h1 id="titulo">Tienda</h1>
+    </header>
+    <main id="principal">
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
-
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-     <div id="menuprincipal">
-        <ul>
-        <li> <a href = "/" data-toggle="tooltip" data-placement="top" title="Tooltip on top" > Inicio </a> </li>
-          <li> <a href = "/categories" data-toggle="tooltip" data-placement="top" title="Tooltip on top" > Categorias </a> </li>
-          <li><%= link_to 'Producto', products_path %> </li>
-          <button type="button" class="btn btn-primary">Primary</button>
+      <div id="menuprincipal">
+        <ul class="btn-group-vertical">
+          <li type="button" class="btn btn-secondary"><a href="/" data-toggle="tooltip" data-placement="top" title="Inicio">Inicio</li>
+          <li type="button" class="btn btn-secondary"><a href="/categories" data-toggle="tooltip" data-placement="top" title="Menú Categoria">Categorias</li>
+          <li type="button" class="btn btn-secondary"><%= link_to 'Producto', products_path %></li>
         </ul>
-     </div>
-     <div id="contenido">
-    <%= yield %>
-    </div>
+      </div>
+      <div id="contenido">
+          <%= yield %>
+      </div>
     </main>
-
   </body>
 </html>
-
